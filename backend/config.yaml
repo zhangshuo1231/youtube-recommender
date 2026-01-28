@@ -1,0 +1,31 @@
+scoring:
+  relevance_weight: 0.30
+  like_ratio_weight: 0.25
+  view_count_weight: 0.20
+  recency_weight: 0.15
+  duration_match_weight: 0.10
+  # comment_quality_weight: 0.00  # Reserved for future LLM analysis
+
+filters:
+  default_max_results: 15
+  final_recommendations: 3
+
+duration_ranges:
+  short:
+    max_minutes: 10
+  medium:
+    min_minutes: 10
+    max_minutes: 30
+  long:
+    min_minutes: 30
+
+# Reserved for future LLM comment analysis
+comment_analysis:
+  enabled: false
+  # llm_provider: "openai"
+  # max_comments_to_analyze: 50
+  # red_flags:
+  #   - "paid course"
+  #   - "clickbait"
+  #   - "outdated"
+  #   - "promotional"
